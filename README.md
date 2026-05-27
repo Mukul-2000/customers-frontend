@@ -1,20 +1,21 @@
-# Customer Management API
+# Customers Frontend
 
-REST API built with Node.js, Express, and MongoDB
+React application for Customer Management
 
 ## Features
-- Create, Read, Update, Delete customers
-- MongoDB integration
+- View all customers
+- Add new customer
+- Update customer details
+- Delete customer
 
 ## Tech Stack
-Node.js, Express.js, MongoDB
+- React.js
+- TypeScript
+- Axios
 
 ## Setup
 npm install
 npm start
 
-## Endpoints
-GET    /customers
-POST   /customers
-PUT    /customers/:id
-DELETE /customers/:id
+## Backend Repository
+https://github.com/Mukul-2000/customers-backend
