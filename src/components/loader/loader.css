@@ -1,0 +1,14 @@
+.dhun-loader-div {
+    width: 100vw;
+    height: 100vh;
+    background-color: #7d7dfd42;
+    position: absolute;
+    z-index: 999999;
+  }
+  
+  .dhun-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  

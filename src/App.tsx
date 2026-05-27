@@ -1,25 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+// import logo from './logo.svg';
 import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "react-toastify/dist/ReactToastify.css";
+import { IsLoading } from './App.context';
+import Loader from './components/loader/loader';
+import {Toaster} from 'react-hot-toast'
+import MainRoutes from './routes';
+
 
 function App() {
+  const [loading, setLoading] = useState<boolean>(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <IsLoading.Provider value={{ loading, setLoading }}>
+        {loading && <Loader />}
+        <MainRoutes />
+        <Toaster 
+        position="bottom-right"
+        reverseOrder={false}
+        />
+      </IsLoading.Provider>
+    </>
   );
 }
 

@@ -1,0 +1,56 @@
+import axios, { Method } from "axios";
+import axiosHandler from "../helper/axiosHandler";
+
+interface IParams {
+  value: any;
+  index: string;
+}
+
+export enum RequestMethods {
+  GET = "get", 
+  POST = "post", 
+  PUT = "put", 
+  DELETE= "delete"
+}
+
+export default async function makeRequest(
+  url: string,
+  method: Method,
+  inputPayload?: any
+) {
+  let requestConfig = {
+    baseURL: `${process.env.REACT_APP_API}`,
+    url: url,
+    method: method,
+    // headers: {
+    //   Authorization: sessionStorage.getItem("authKey") || "",
+    // },
+    data: {},
+  };
+
+  // console.log(requestConfig)
+  if (method !== "get" && inputPayload) {
+    requestConfig.data = inputPayload;
+  }
+
+  try {
+    let response = await axios.request(requestConfig);
+    return response;
+  } catch (error: any) {
+    console.log("makeRequest()", error);
+    axiosHandler(error.message);
+    throw error.message;
+  }
+}
+
+export function makeParams(params: IParams[]) {
+  let paramString = "?";
+  for (const param in params) {
+    if (params[param].value) {
+      if (Number(param) != 0) paramString = paramString + "&";
+      paramString =
+        paramString + params[param].index + "=" + params[param].value;
+    }
+  }
+  return paramString;
+}

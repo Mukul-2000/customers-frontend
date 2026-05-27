@@ -1,0 +1,68 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .wrapper {
+    width: 50%;
+    margin-top: 6rem;
+  }
+  
+  .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .companyDataWrapper {
+    margin-top: 2rem;
+    padding: 1em;
+    background-color: aqua;
+  }
+  .cardBody_view {
+    display: flex;
+  }
+  .cardBody_input {
+    display: flex;
+    justify-content: center;
+  }
+  .companyData {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .companyInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.3rem;
+  }
+  
+  .companyValue {
+    display: flex;
+    gap: 2.6rem;
+  }
+  
+  .companyInputs {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .companyInputButtons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .status {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  
+  .checkedStatus {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  
