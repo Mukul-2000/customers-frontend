@@ -2,6 +2,8 @@
 
 React application for Customer Management
 
+## Live URL
+Live Demo: customers-frontend-azure.vercel.app
 ## Features
 - View all customers
 - Add new customer

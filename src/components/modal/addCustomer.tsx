@@ -83,64 +83,10 @@ const AddCustomerModal = () => {
 
   const onSubmit = () => {
 
-    // const isValidEmail = Validation.isEmail(email).isValid;
-    // const isValidFirstName = firstName === "" || !firstName ? false : true;
-    // const isValidLastName = lastName === "" || !lastName ? false : true;
-    // // const isValidBillingAddress = billingAddress === "" || !billingAddress ? false : true;
-    // // const isValidCustomerPhone = +phone && phone > 1;
-    // if (!isValidEmail || !isValidFirstName || !isValidLastName) {
-    //     dispatch(
-    //       onCustomerInputError({
-    //         email: !isValidEmail,
-    //         firstName: !isValidFirstName,
-    //         isValidLastName: !isValidLastName,
-    //       })
-    //     );
-    //   else {
+   
         dispatch(onAddCustomers(inputDataCustomer));
 //   }
   };
-
-// const onFetchAddedCustomer = async () => {
-
-//     const data = {  firstName: customer.firstName, lastName: customer.lastname, email: customer.email, billingAddress: customer.billingAddress, phone: Number(customer.phone) };
-//     // delete data._id;
-//     // delete data.userRole;
-
-//     await CustomerService.onAddCustomer({ data })
-//       .then((res: any) => {
-//         if (res?.status === 200) {
-//           toast.success("Updated")
-//         //   onFetchCustomer();
-//         }
-//       })
-//       .catch((error: any) => {
-//         console.log(error);
-//       });
-//   };
-    // const onSubmit = async () => {
-    //     const data = { firstName: firstName, numberOfAllowedQuestions: Number(company.numberOfAllowedQuestions) };
-
-    //     // console.log(customerDetails._id)
-    //     await CustomerService.onAddCustomer(inputDataCustomer ).then(res => {
-    //     if (res.status === 200) {
-    //         //   setCustomerData(res.data)
-    //         toast.success("Created")
-    //     }
-    //     })
-    // }
-    // const onSubmit = () => {
-    //     onFetchAddedCustomer();
-    //     dispatch(onFetchCustomers());
-    //     // props.setToggle(false);
-    // };
-    // const onCancel = () => {
-    //     // props.setToggle(false);
-    // };
-    // const close = () => {
-    //     // props.setToggle(false);
-    // };
-    
     
 
   return (
@@ -232,23 +178,3 @@ const AddCustomerModal = () => {
 };
 
 export default AddCustomerModal;
-
-
- 
-
-
-    // // <>
-    // //   {
-    // //     <CreateCustomerModal
-    // //       show={true}
-    // //       onChangeValue={onChangeValue}
-    // //       customer={customer}
-    // //       close={close}
-    // //       editCustomerClass={classes.checkStatus}
-    // //       customerInputButtonsClass={classes.companyInputButtons}
-    // //     //   onCheck={onCheck}
-    // //       onSubmit={onSubmit}
-    // //       onCancel={onCancel}
-    // //     />
-    // //   }
-    // </>

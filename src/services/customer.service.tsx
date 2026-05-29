@@ -8,6 +8,10 @@ export class CustomerService{
         return await makeRequest(`${url.getAllCustomers}`, MethodsEnum.GET)
     }
 
+    static async createCustomer(payload: any){
+        return await makeRequest(`${url.addCustomer}`, MethodsEnum.POST, payload)
+    }
+
     static async getCustomerDetails(customerId: any){
         return await makeRequest(url.getCustomerDetails+customerId, MethodsEnum.GET)
     }
